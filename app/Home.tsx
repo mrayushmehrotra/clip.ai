@@ -3,99 +3,203 @@ import Image from "next/image";
 import { featuresGridList } from "./utils/data";
 
 export default function Home() {
-
   return (
-    <div className="space-y-10">
-      {/* <Header /> */}
-      <div className="mx-auto bg-surfacePrimary max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32">
-        <p className="mx-auto -mt-4 max-w-2xl text-lg tracking-tight text-white-700 sm:mt-6">Welcome to
-          <span className="border-b border-dotted border-slate-300"></span>
-        </p>
-
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-white-900 sm:text-7xl">
-          <span className="inline-block">Clip
-            <span className="relative whitespace-nowrap text-white-600">
-              <svg aria-hidden="true" viewBox="0 0 418 42" className="absolute top-2/3 left-0 h-[0.58em] w-full fill-yellow-300/70" preserveAspectRatio="none"><path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path></svg>
-              <span className="relative">JS</span></span>
-          </span>
-        </h1>
-
-        <p className="mx-auto mt-9 max-w-2xl text-lg tracking-tight text-white-700 sm:mt-6">
-          <span className="inline-block">Edit your videos from your PC or phone no downloads, no registration, no watermarks.</span>
-          <span className="inline-block">Online, Free and Open Source</span>
-        </p>
-
-        <div className="mt-12 flex flex-col justify-center gap-y-5 sm:mt-10 sm:flex-row sm:gap-y-0 sm:gap-x-6">
-          <div className="relative flex flex-1 flex-col items-stretch sm:flex-none" data-headlessui-state="">
-            <Link href="/projects" as={"/projects"}
-              className="rounded-full bg-white border border-solid border-transparent transition-colors flex items-center justify-center text-gray-800 gap-2 hover:bg-[#ccc] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-              id="headlessui-menu-button-:r4:" aria-haspopup="true" aria-expanded="false" data-headlessui-state="" type="button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                fill="currentColor"
-                className="h-6 w-6 flex-none"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6H7v2h6v6h2v-6h6v-2h-6z" />
-              </svg>
-              <span className="ml-3">Get Started</span>
-            </Link>
-          </div>
-          <Link href="https://github.com/mohyware/clip.js" target="_blank"
-            className="rounded-full bg-black border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              fill="currentColor"
-              className="h-6 w-6 flex-none"
-            >
-              <path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.207 11.385.6.111.793-.261.793-.577 0-.285-.011-1.04-.016-2.04-3.338.728-4.04-1.562-4.04-1.562-.545-1.38-1.33-1.748-1.33-1.748-1.087-.743.082-.73.082-.73 1.2.085 1.833 1.25 1.833 1.25 1.065 1.833 2.79 1.302 3.467.997.107-.773.417-1.302.758-1.603-2.664-.306-5.467-1.332-5.467-5.92 0-1.307.466-2.381 1.233-3.221-.123-.306-.534-.92.117-1.89 0 0 .765-.25 2.5.92a8.49 8.49 0 0 1 2.292-.306c.772 0 1.556.1 2.292.306 1.733-1.17 2.5-.92 2.5-.92.651.97.24 1.584.117 1.89.767.84 1.233 1.914 1.233 3.221 0 4.604-2.805 5.607-5.473 5.91.431.373.806 1.105.806 2.24 0 1.616-.016 2.93-.016 3.33 0 .315.192.69.8.577 4.771-1.585 8.207-6.082 8.207-11.385C24 5.372 18.628 0 12 0z" />
-            </svg>
-            <span className="ml-3">Star on GitHub</span>
-          </Link>
-        </div>
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 overflow-hidden">
+      {/* Film grain texture overlay */}
+      <div className="fixed inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat',
+        }}></div>
       </div>
-      {/* Features Section */}
-      <div className="space-y-10">
-        <h2 className="mx-auto max-w-4xl text-center font-display text-5xl font-medium tracking-tight text-white-900 sm:text-4xl">
-          <span className="inline-block">What Can it do?</span>
-        </h2>
 
-        <div className="grid w-full max-w-[1680px] mx-auto py-4 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          {featuresGridList.items.map(({ id, title, description, icon }) => (
-            <article
-              key={id}
-              className="flex flex-col gap-3 md:gap-4 rounded-lg border border-white border-opacity-10 shadow-md p-3 md:p-4 [box-shadow:_70px_-20px_130px_0px_rgba(255,255,255,0.05)_inset] dark:[box-shadow:_70px_-20px_130px_0px_rgba(255,255,255,0.05)_inset]"
-            >
-              <figure className="flex size-8 md:size-9 items-center justify-start rounded-full bg-surface-secondary p-2 dark:border-dark-border dark:bg-dark-surface-secondary">
-                <Image
-                  alt={icon.alt ?? title}
-                  className="invert"
-                  height={18}
-                  src={icon.url}
-                  width={18}
-                />
-              </figure>
-              <div className="flex flex-col items-start gap-1">
-                <h5 className="text-base md:text-lg font-medium">{title}</h5>
-                <p className="text-pretty text-sm md:text-base text-text-secondary dark:text-dark-text-secondary">
-                  {description}
-                </p>
+      {/* Diagonal accent element */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-orange-500/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-teal-500/10 to-transparent rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+      {/* Hero Section */}
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-24 lg:pt-32 lg:pb-32">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          {/* Left content - Asymmetric */}
+          <div className="lg:col-span-7 space-y-8">
+            {/* Overline with film strip accent */}
+            <div className="flex items-center gap-3 group">
+              <div className="flex gap-0.5">
+                <div className="w-1 h-8 bg-orange-500 animate-pulse"></div>
+                <div className="w-1 h-8 bg-orange-400 animate-pulse delay-75"></div>
+                <div className="w-1 h-8 bg-orange-500 animate-pulse delay-150"></div>
               </div>
-            </article>
-          ))}
+              <p className="text-teal-400 uppercase tracking-[0.3em] text-sm font-medium">
+                Production-Grade Video Editing
+              </p>
+            </div>
+
+            {/* Main headline - Bold typography */}
+            <h1 className="relative">
+              <span className="block text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight leading-none">
+                <span className="text-white" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>CLIP</span>
+                <span className="relative inline-block">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-400 to-orange-500" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                    .AI
+                  </span>
+                  {/* Animated underline */}
+                  <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-amber-400 transform origin-left animate-pulse"></div>
+                </span>
+              </span>
+              <span className="block text-2xl lg:text-3xl mt-4 text-slate-300 font-light tracking-wide" style={{ fontFamily: '"Work Sans", sans-serif' }}>
+                Edit like a pro.<br className="hidden sm:block" />
+                <span className="text-teal-400">No downloads. No limits.</span>
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-lg lg:text-xl text-slate-400 max-w-xl leading-relaxed" style={{ fontFamily: '"Work Sans", sans-serif' }}>
+              Browser-based video editing powered by AI. Create stunning videos from any device with professional tools that rival desktop software.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link
+                href="/projects"
+                className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 rounded-lg overflow-hidden transition-all hover:shadow-2xl hover:shadow-orange-500/50 hover:scale-105"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative flex items-center justify-center gap-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    className="w-6 h-6 group-hover:rotate-90 transition-transform"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  <span className="text-lg font-bold text-slate-900" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>
+                    START CREATING
+                  </span>
+                </div>
+              </Link>
+
+            </div>
+
+            {/* Stats bar */}
+            <div className="flex gap-8 pt-8 border-t border-slate-700/50">
+              <div>
+                <div className="text-3xl font-bold text-orange-400" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>100%</div>
+                <div className="text-sm text-slate-500 uppercase tracking-wider">Free & Open</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-teal-400" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>0</div>
+                <div className="text-sm text-slate-500 uppercase tracking-wider">Watermarks</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-orange-400" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>∞</div>
+                <div className="text-sm text-slate-500 uppercase tracking-wider">Possibilities</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right visual element - Abstract video frame */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative aspect-square max-w-md mx-auto lg:max-w-none">
+              {/* Layered frames creating depth */}
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-2 border-teal-500/30 rotate-6 transform hover:rotate-12 transition-transform duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl border-2 border-orange-500/30 -rotate-3 transform hover:-rotate-6 transition-transform duration-500"></div>
+              <div className="relative bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl border-2 border-slate-600 p-8 backdrop-blur-sm">
+                {/* Film strip holes */}
+                <div className="absolute left-2 top-0 bottom-0 flex flex-col justify-around">
+                  {[...Array(8)].map((_, i) => (
+                    <div key={i} className="w-3 h-3 rounded-sm bg-slate-800 border border-slate-700"></div>
+                  ))}
+                </div>
+                <div className="absolute right-2 top-0 bottom-0 flex flex-col justify-around">
+                  {[...Array(8)].map((_, i) => (
+                    <div key={i} className="w-3 h-3 rounded-sm bg-slate-800 border border-slate-700"></div>
+                  ))}
+                </div>
+
+                {/* Center content - animated play icon */}
+                <div className="flex items-center justify-center h-full">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-orange-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                    <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center group hover:scale-110 transition-transform cursor-pointer">
+                      <svg className="w-16 h-16 text-slate-900 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <br />
-        <br />
-        <br />
       </div>
 
-      {/* <Footer /> */}
+      {/* Features Section */}
+      <div className="relative py-24 bg-slate-950/50 backdrop-blur-sm">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* Section header */}
+          <div className="text-center mb-16">
+            <div className="inline-block">
+              <h2 className="text-5xl lg:text-6xl font-black text-white mb-4" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>
+                PROFESSIONAL TOOLS
+              </h2>
+              <div className="h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
+            </div>
+            <p className="mt-6 text-xl text-slate-400 max-w-2xl mx-auto" style={{ fontFamily: '"Work Sans", sans-serif' }}>
+              Everything you need to create stunning videos, right in your browser
+            </p>
+          </div>
+
+          {/* Features grid - staggered layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuresGridList.items.map(({ id, title, description, icon }, index) => (
+              <article
+                key={id}
+                className="group relative bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-teal-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/10 hover:-translate-y-1"
+                style={{
+                  animationDelay: `${index * 100}ms`,
+                }}
+              >
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-teal-500/0 group-hover:from-orange-500/5 group-hover:to-teal-500/5 rounded-xl transition-all duration-300"></div>
+
+                <div className="relative space-y-4">
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500/20 to-teal-500/20 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Image
+                      alt={icon.alt ?? title}
+                      className="invert opacity-80 group-hover:opacity-100 transition-opacity"
+                      height={20}
+                      src={icon.url}
+                      width={20}
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div>
+                    <h5 className="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors" style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}>
+                      {title}
+                    </h5>
+                    <p className="text-slate-400 leading-relaxed" style={{ fontFamily: '"Work Sans", sans-serif' }}>
+                      {description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Corner accent */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Add Google Fonts */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     </div>
   );
 }

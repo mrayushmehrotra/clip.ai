@@ -36,10 +36,10 @@ Alternatively, use Docker:
 
 ```bash
 # Build the Docker image
-docker build -t clipjs .
+docker build -t clip.ai .
 
 # Run the container
-docker run -p 3000:3000 clipjs
+docker run -p 3000:3000 clip.ai
 ```
 Then navigate to [http://localhost:3000](http://localhost:3000)
 

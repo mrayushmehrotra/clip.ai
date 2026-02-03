@@ -47,19 +47,19 @@ export default function ProjectName() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     onKeyDown={handleKeyDown}
-                    className="text-2xl font-bold mt-4 capitalize tracking-wider bg-black w-full px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="text-base font-medium bg-surfaceSecondary border border-purple text-textPrimary px-3 py-1.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple/50"
                     autoFocus
                 />
             ) : (
-                <p
+                <button
                     onClick={handleClick}
-                    className="text-2xl font-bold mt-4 capitalize tracking-wider cursor-pointer hover:bg-gray-800 px-2 py-1 rounded flex items-center"
+                    className="text-base font-medium text-textPrimary hover:text-textPrimary bg-transparent hover:bg-surfaceSecondary px-3 py-1.5 rounded-lg transition-all flex items-center gap-2 group"
                 >
-                    {projectName}
-                    <svg className="w-4 h-4 ml-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <span className="truncate max-w-[200px]">{projectName || 'Untitled Project'}</span>
+                    <svg className="w-3 h-3 text-textTertiary group-hover:text-purple transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
                     </svg>
-                </p>
+                </button>
             )}
         </div>
     );

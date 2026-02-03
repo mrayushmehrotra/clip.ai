@@ -4,7 +4,6 @@ import { listFiles, useAppDispatch, useAppSelector } from "../../../../store";
 import { setMediaFiles, setFilesID } from "../../../../store/slices/projectSlice";
 import { storeFile } from "../../../../store";
 import { categorizeFile } from "../../../../utils/utils";
-import Image from 'next/image';
 
 export default function AddMedia() {
     const { mediaFiles, filesID } = useAppSelector((state) => state.projectState);
@@ -23,20 +22,15 @@ export default function AddMedia() {
     };
 
     return (
-        <div
-        >
+        <div className="w-full">
             <label
                 htmlFor="file-upload"
-                className="cursor-pointer rounded-full bg-white border border-solid border-transparent transition-colors flex flex-row gap-2 items-center justify-center text-gray-800 hover:bg-[#ccc] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-auto py-2 px-2 sm:px-5 sm:w-auto"
+                className="cursor-pointer w-full btn-primary flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium text-sm transition-all hover:shadow-glow group"
             >
-                <Image
-                    alt="Add Project"
-                    className="Black"
-                    height={12}
-                    width={12}
-                    src="https://www.svgrepo.com/show/514275/upload-cloud.svg"
-                />
-                <span className="text-xs">Add Media</span>
+                <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                <span>Upload Media</span>
             </label>
             <input
                 type="file"
