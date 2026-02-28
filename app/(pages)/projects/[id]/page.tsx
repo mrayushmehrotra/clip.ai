@@ -22,6 +22,7 @@ import { MediaFile } from "@/app/types";
 import ExportList from "../../../components/editor/AssetsPanel/tools-section/ExportList";
 import Image from "next/image";
 import ProjectName from "../../../components/editor/player/ProjectName";
+import AIAssistant from "../../../components/editor/ai/AIAssistant";
 
 export default function Project({ params }: { params: { id: string } }) {
     const { id } = params;
@@ -301,6 +302,9 @@ export default function Project({ params }: { params: { id: string } }) {
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+            {/* AI Assistant */}
+            <AIAssistant />
         </div >
     );
 }

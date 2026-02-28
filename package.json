@@ -23,6 +23,7 @@
     "basehub": "^8.2.11",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",
+    "groq-sdk": "^0.37.0",
     "idb": "^8.0.2",
     "lodash": "^4.17.21",
     "lucide-react": "^0.503.0",
